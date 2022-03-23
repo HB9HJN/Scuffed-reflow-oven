@@ -5,7 +5,7 @@ A project of a scuffed refolw oven
 ## Schematics:
 
 ### Overview:
-    (UNI-T UT61E)-----SERIAL----(PC)----Serial----(RPi Pico)----(SolidState Relais)
+    (UNI-T UT61E)-----SERIAL----(PC)----Serial----(RPi Pico)----(SolidState Relais)----(Oven Mains)
 
 ### RPi Pico - SSR
 
