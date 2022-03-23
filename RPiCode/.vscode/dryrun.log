@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/charpoank/Pico/Projects/Sweep'
+make: Leaving directory '/home/charpoank/Pico/Projects/Sweep'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+ 
