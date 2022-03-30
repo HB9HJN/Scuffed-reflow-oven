@@ -2,6 +2,7 @@ import datetime
 from turtle import delay
 from attr import has
 import serial
+import os
 import csv
 import subprocess
 from time import sleep
@@ -43,7 +44,7 @@ hasStarted = False
 
 def getData():
     global old_result
-    pro = subprocess.Popen("/home/charpoank/Oven/getData", shell=True, stdout=subprocess.PIPE)
+    pro = subprocess.Popen(os.getcwd()+"/getData", shell=True, stdout=subprocess.PIPE)
     try:
         result = str(pro.communicate()[0]).split(" ")
     except:
@@ -169,8 +170,10 @@ def update_graph_live(n):
         hasStarted = True
         isSoldering = False
 
-    if(isSoldering == True):
-        if (int(temp_list[cycle][0]) <= timer and cycle < len(temp_list)-1):
+    if(isSoldering == True and hasStarted == True):
+        if (cycle > len(temp_list)-1):
+            isSoldering = False
+        elif (int(temp_list[cycle][0]) <= timer):
             cycle += 1
             soll_temp = temp_list[cycle][1]
         
