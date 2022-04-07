@@ -1,6 +1,4 @@
 import datetime
-from turtle import delay
-from attr import has
 import serial
 import os
 import csv
